@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <script type="text/javascript">
+    	 var message={
+    		username:"张三",
+    		avatar:"https://wifi.ahzhiyi.com/public/static/imgs/avatar.jpg",
+    		id:"5",
+    		groupid:"",
+    		type:"friend",
+    		content:"img[https://wifi.ahzhiyi.com/plugin/chat/public/uploads/63892f596ddb5268d323a5a4decd5613.png]",
+    		timestamp:1559179532000
+    	 } 
+    	//  var groupdata = {"username":"张三","avatar":"https://wifi.ahzhiyi.com/public/static/imgs/avatar.jpg","id":"77","groupid":"77","type":"group","content":"img[https://wifi.ahzhiyi.com/plugin/chat/public/uploads/63892f596ddb5268d323a5a4decd5613.png]","timestamp":1559179552000}
+
+
+        // var fileDate = {
+        // 	userId:"1","toId":"5","toAvater":"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/16ab662b","toName":"测试[张三]","type":"friend","lasterMsgContent":"文件","lasterMsgTime":1559179530,"unreadCount":0}
+
+        // var fileDate ={"fromeid":"1","fromeavater":"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/16ab662b","content":"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/91c77a1e","toid":"5","tousername":"测试[张三]","toavater":"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/16ab662b","type":"friend","EventTime":1559179530,"Layout":"jpg","Sender":"to"} 
+
+
+      
+		// var groupdata = {
+		// 	userId:"1",
+		// 	toId:"77",
+		// 	toAvater:"/storage/emulated/0/Android/data/com.u1279561131.pxq/cach/iskhumb/16ab662b",
+		// 	toName:"测试群",
+		// 	type:"group",
+		// 	lasterMsgContent:"文件",
+		// 	lasterMsgTime:1559179551,
+		// 	unreadCount:0}
+		// var  groupdata = {
+		// 	fromeid:"1",
+		// 	fromeavater:"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/16ab662b",
+		// 	content:"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/91c77a1e",
+		// 	toid:"77",
+		// 	tousername:"张三",
+		// 	toavater:"/storage/emulated/0/Android/data/com.u1279561131.pxq/cache/disk/thumb/16ab662b",
+		// 	type:"group",
+		// 	EventTime:1559179551,
+		// 	Layout:"jpg",
+		// 	Sender:"to",
+		// 	groupId:"77"
+		// } 
+
+
+
+
+
+		//   var chatRecord = {
+        //       fromeid: userId,
+        //       fromeavater: Userheader,
+        //       content: msgContent,
+        //       toid: toUserId,
+        //       tousername: fileData.data.username,
+        //       toavater: toUserheader,
+        //       type: chatLayout,
+        //       EventTime: time,
+        //       Layout: msgType,
+        //       Sender: "to",
+        //       groupId:fileData.data.groupid
+
+        //   };
+          
+        //   var chatHistory = {
+        //       userId: getUserid(),
+        //       toId: toUserId,
+        //       toAvater: toUserheader,
+        //       toName: toUserName,
+        //       type: chatLayout,
+        //       lasterMsgContent: msgType === 'text' ? msgContent : '文件',
+        //       lasterMsgTime: time,
+        //       unreadCount: 0
+        //   };
+
+        function ChatRecord(msgContent,message,msgType){
+                        content = msgContent,
+                        toid = message.id,
+                        tousername = message.username,
+                        toavater = message.avatar,
+                        type = message.type,
+                        EventTime = message.timestamp,
+                        Layout = msgType,
+                        Sender = "to",
+                        groupId = message.id
+             }
+
+          
+            function ChatHistory(){
+                ChatRecord.call(this,'hahha',message,'typpe');
+                        // userId = getUserid(),
+                        // toId = message.id,
+                        // toAvater = message.avatar,
+                        // toName = message.username,
+                        // type = message.type,
+                        // lasterMsgContent = msgType === 'text' ? msgContent : '文件',
+                        // lasterMsgTime = message.timestamp,
+                        // unreadCount = 0 
+            }
+            var history = new ChatHistory();
+            
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        p {
+            background: aqua;
+            border: 3px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        span {
+            background: red;
+            border: 1px solid black;
+        }
+        .postion{
+            position: relative;
+            background: #f40;
+            top: 30px;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basic document flow</h1>
+
+    <p class="postion">I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+
+    <p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total
+        width and height is our content + padding + border width/height.</p>
+
+    <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our
+        margins, not both.</p>
+
+    <p>inline elements
+        <span>like this one</span>
+        and <span>this one</span>
+        sit on the same line as one another, and adjacent text nodes,
+        if there is space on the same line. Overflowing inline elements will
+        <span>wrap onto a new line if possible (like this one containing text)</span>,
+        or just go on to a new line if not, much like this image will do:
+        <img src="https://mdn.mozillademos.org/files/13360/long.jpg">
+    </p>
+    <script>
+        //  正常的布局流    
+        //  块级元素 ： 在新的一行出现 ，就算不能整行显示，也会把下一个元素给挤到新的一行
+        // 内敛元素  不会出现在新的一行，而是相邻之间或则包含关系在同一行上，前提是在父级盒子的宽度之内；
+  
+        /***
+        *   定位  position 
+        *  理解是 脱离文档流的束缚， 来达到想要的效果
+        *  1. 静态定位：   position :static  默认的行为  不会产生行为的变化
+        *  2. 相对定位 ： position ：relative ; 与静态定位非常相似  占据正常的文档流
+        */
+        //  固定定位fixed  相对与浏览器视口本身  而绝对定位absolute则相对与<html>元素或离奇最近的定位祖先
+        // 粘性定位   形式上与相对定位 和固定定位的混合  元素在跨越特定值时之前是相对定位， 之后为固定定位
+        //  z-index  改变定位元素的层级关系   对于没有定位的元素  定位元素使用z-index 为正值，则在其上， 为负值则在其下
+        //         父子关系处理  如果父元素的设置了z-index  ， 则子元素上在设置就会失效
+        //  相同z-index 的区别
+        //  如果 两个元素没有设置z-index 则设置了定位的在上面
+        //  如果两个元素 没有设置定位出现重合现象 或设置了定位  z-index值相同 则此时的是按照文档流的的顺序  ，后面的覆盖前面的
+        
+    </script>
+</body>
+
+</html>

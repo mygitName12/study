@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        
+        }
+        .box{
+            width: 100%;
+        }
+        @media only sccreen and (min-width:500px){
+            .dark_blue{width:50%;}
+            #container2{width:50%}
+        }
+        @media only sccreen and (min-width: 600px){
+            .dark_blue{width:25%; order: 1}
+            #container2{width: 50%}
+            .red{width:25%; order: -1;}
+        } */
+        .wrapper{
+            width: 100px;
+            height: 50px;
+            border: 1px solid #ccc;
+            overflow:scroll;
+        }
+        li{
+            list-style: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li>12</li>
+            <li>12</li>
+            <li>12</li>
+            <li>12</li>
+        </ul>
+    </div>
+    <script>
+        var scoll = document.getElementsByClassName("wrapper")[0];
+        scoll.scrollLeft;
+        scoll.scrollTop-=scroll_begin.offsetHeight; 
+    </script>
+    <!-- <div class="content">
+        <div class="box yellow"></div>
+        <div class="contatiner" id="container2">
+            <div class="box blue"></div>
+            <div class="box green"></div>
+        </div>
+        <div class="box red"></div>
+    </div> -->
+</body>
+</html>

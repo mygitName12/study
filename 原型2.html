@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function storageMessage(msgContent,msgType) {
+        console.log(msgContent + '----' + msgType)
+        var nowDate = getNowFormatDate();
+        var time = transdate(nowDate);
+        var chatRecord = {
+            fromeid: userId,
+            fromeavater: Userheader,
+            content: msgContent,
+            toid: toUserId,
+            tousername: toUserName,
+            toavater: toUserheader,
+            type: chatLayout,
+            EventTime: time,
+            Layout: msgType,
+            Sender: "to"
+
+        };
+        insertChatRecord(chatRecord);
+        var chatHistory = {
+            userId: getUserid(),
+            toId: toUserId,
+            toAvater: toUserheader,
+            toName: toUserName,
+            type: chatLayout,
+            lasterMsgContent: msgType === 'text' ? msgContent : '文件',
+            lasterMsgTime: time,
+            unreadCount: 0
+        };
+    }
+
+    function Father(){
+
+    }
+</script>
+</body>
+</html>

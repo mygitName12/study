@@ -1,0 +1,72 @@
+DOM 中一共有12 中类型的节点
+元素节点 ：一个元素存在于dom中
+根节点 ： 树中顶层节点， 在html的情况下 ，总是一个html节点
+子节点 : 在一个节点内的节点 
+后代节点 ：  位于一个节点内的节点； 可以是子节点 或子节点的节点
+父节点 ：  里面有另一个节点的节点； 相对于子节点来说， 它的上一层级
+兄弟节点  ：dom树中位于同一级的节点  
+文本节点 ： 包含有字符串的节点
+属性节点  : 其他节点的属性 
+注释节点：  
+
+1.  querySelector()方法用来返回文档中匹配指定css选择器的一个元素
+    querySelectorAll() 则是选择指定的所有的元素
+2. dom.textContent = "文档流"  修改dom 的文字, 或添加文字
+3. link.href = 'https://www.baidu.com'  修改连接的url指向
+
+
+创建并放置新的节点:
+ 
+ 1. 先获取到文档中的元素   用querySelector()方法；
+     var sect  = docuement.querySelector('section');
+ 2. 创建一个段落  用 Document.Create.Element();创建一个段落 ，并赋予文本
+    var  para =document.createElement('p');
+    para.textContent = 'we hope you enjoyed the ride';
+3.   用 node.appendChild()方法在后面追加新的段落
+        sect.appendChild(para);
+
+
+
+4.最后， 在内部连接的段落中添加文本节点，完美的结束句子
+var text = document.createTextNode()
+
+5. 在获取内部链接的段落引用，并把文本节点绑定到这个节点上；
+   var linkPara = document.querySelector('p');
+   linkPara.appendChild(text);
+
+
+移除和删除元素 
+1.把指定的元素 移动到元素标签的跟节点的子节点
+ sect.appendChild(linkPara);
+
+2. removeChild()删除节点和其父节点的引用 
+sect.removeChild(linkPara);
+
+3. 删除一个仅基于自身引用的节点
+linkPara.removeChild(linkPara);
+
+ Node.cloneNode();
+
+操作样式 
+1. 
+
+2. 为元素创建或改变 某个新属性
+   para.setAttribute('class','highlight');
+
+
+从window对象中获取有用的信息
+ 
+ 1. window.innerWidth 获取浏览器视口的宽度
+ 2. window.innerHeight 获取浏览器视口的高度
+
+ 3. 获取或设置当前窗口的resize事件处理函数  下面的例子是每次调节窗口，窗口改变之后 都会触发此函数
+          var div = document.querySelector('div');
+        window.onresize = function(){
+            var WIDTH = window.innerWidth;
+          var HEIGHT = window.innerHeight;
+          div.style.width = WIDTH + 'px';
+          div.style.height = HEIGHT + 'px';
+          console.log(WIDTH +'----'+ HEIGHT)
+        }
+
+  

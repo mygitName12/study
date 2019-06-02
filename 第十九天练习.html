@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <div id="wrapper">
+        <div id="news-top" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>JS</span><a class="active" href="">Some Link2</a></li>
+                    <li><span>CSS</span><a href="">Some Link3</a></li>
+                    <li><span>JS</span><a href="">Some Link4</a></li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>
+        <div id="news-normal" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>HTML</span><a href="">Some Link2</a></li>
+                    <li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+                    <li><span>CSS</span><a href="">Some Link4</a></li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>      
+    </div>
+    <script>
+        
+
+    function getAllListItem() {
+        var content = document.getElementsByClassName('content')[0];
+        var item = content.getElementsByTagName('li')[0].style.backgroundColor = 'red';
+        for(var prop in content){
+            // console.log(content[prop])
+            // var item = content[prop].getElementsByTagName('li');
+            // item.style.backgroundColor = 'red';
+
+        }
+      
+      
+    }
+    getAllListItem();
+    function findAllHtmlSpanInOneSection() {
+        // 返回某个section下所有span中内容为HTML的span标签
+        var array = [];
+        var  section = document.getElementsByClassName('section')[0];
+            var content = section.getElementsByClassName('content')[0];
+            var lisapn = content.getElementsByTagName('li');
+            for(var i = 0; i < lisapn.length; i++){
+                var spanhtml = lisapn[i].getElementsByTagName('span')[0];
+                if(spanhtml.textContent == 'HTML'){
+                    console.log(spanhtml)
+                   array.push(spanhtml);  
+                }
+            }
+            return array;
+        }
+   //  var spanlist = findAllHtmlSpanInOneSection();
+   // 不知道为什么push进入的与在外面的不一样呢， 就不是标签了
+    function findListItem() {
+        // 返回某个section下，所有所包含span内容为spanCont的LI标签
+            var section = document.getElementsByClassName('section')[0];
+            // var content = section.getElementsByClassName('content')[0];
+            // var lisapn = content.getElementsByTagName('li');
+            console.log(section.childNodes)
+        
+    }
+    findListItem()
+    function getActiveLinkContent() {
+        // 返回某个section下，class为active的链接中包含的文字内容
+        var section = document.getElementsByClassName('section')[0];
+            var content = section.getElementsByClassName('content')[0];
+            var lisapn = content.getElementsByTagName('li');
+            for(var i = 0; i < lisapn.length; i++){
+                var spanhtml = lisapn[i].getElementsByTagName('a')[0];
+                if(spanhtml.className == 'active'){
+                    console.log(spanhtml.textContent) 
+                }
+            }        
+        }
+    // getActiveLinkContent();
+
+    </script>
+</body>
+</html>

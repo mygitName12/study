@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            flex: 1 100px;
+            border: 1px solid #eee;
+            height: 260px;
+        }
+        .main:last-of-type{
+            flex: 2 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .main .contant{
+            flex: 1;
+            border: 1px solid #ccc;
+        }
+        .main .contant:last-of-type{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+       .last button:nth-of-type(2){
+           order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">哈哈哈哈哈，就是笑笑呀</div>
+        <div class="main">哈哈哈</div>
+        <div class="main">
+            <div class="contant">这个是用来站位用的符号</div>
+            <div class="contant">这个是测试的文字</div>
+            <div class="contant last">
+                <button>按钮1</button>
+                <button>按钮2</button>
+                <button>按钮3</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
